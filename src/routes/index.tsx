@@ -33,35 +33,13 @@ function Index() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#15397a]/30 via-transparent to-transparent" />
 
       <div className="relative z-10 w-full max-w-5xl">
-        {/* Header text */}
-        <div className="mb-6 text-center sm:mb-8">
-          <p className="text-sm font-semibold tracking-[0.2em] text-[#f7ff00] uppercase sm:text-base">
-            Deputado Estadual
-          </p>
-          <h1 className="mt-1 text-3xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">
-            Val Ceasa
-          </h1>
-          <p className="mt-2 text-lg font-medium text-white/90 sm:text-2xl">
-            O Amigo do Povo
-          </p>
-        </div>
-
-        {/* Campaign image - larger and more prominent */}
+        {/* Campaign image */}
         <div className="mx-auto mb-8 w-full max-w-4xl overflow-hidden rounded-2xl border-4 border-[#f7ff00] shadow-2xl shadow-black/40 sm:mb-10 sm:rounded-3xl sm:border-[6px]">
           <img
             src={valCeasa.url}
             alt="Val Ceasa - Deputado Estadual 25888"
             className="h-auto w-full"
           />
-        </div>
-
-        {/* Number badge */}
-        <div className="mb-8 flex justify-center sm:mb-10">
-          <div className="rounded-full bg-[#f7ff00] px-6 py-2 shadow-lg shadow-[#f7ff00]/20 sm:px-8 sm:py-3">
-            <span className="text-2xl font-black tracking-wider text-[#0b1f4d] sm:text-4xl">
-              2 5 8 8 8
-            </span>
-          </div>
         </div>
 
         {/* Social buttons */}
@@ -85,11 +63,6 @@ function Index() {
             Facebook
           </a>
         </div>
-
-        {/* Footer handle */}
-        <p className="mt-8 text-center text-xs font-medium text-white/60 sm:mt-10 sm:text-sm">
-          @val.ceasa | Deputado Val Ceasa
-        </p>
       </div>
     </main>
   );
