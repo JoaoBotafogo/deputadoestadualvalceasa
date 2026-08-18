@@ -1,24 +1,97 @@
 import { createFileRoute } from "@tanstack/react-router";
+import appScreenshot from "@/assets/app-screenshot.png.asset.json";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Val Ceasa | Gestão de Moradores" },
+      {
+        name: "description",
+        content:
+          "Sistema simples para gestão de moradores, unidades e comunicação do condomínio.",
+      },
+      {
+        property: "og:title",
+        content: "Val Ceasa | Gestão de Moradores",
+      },
+      {
+        property: "og:description",
+        content:
+          "Sistema simples para gestão de moradores, unidades e comunicação do condomínio.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
+    <main className="flex min-h-screen flex-col items-center justify-center bg-background px-6 py-12 sm:py-16">
+      <div className="w-full max-w-3xl text-center">
+        <h1 className="mb-3 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+          Val Ceasa
+        </h1>
+        <p className="mb-10 text-lg text-muted-foreground">
+          Sistema simples para gestão de moradores e condomínios.
+        </p>
+
+        <div className="mb-12 overflow-hidden rounded-2xl border border-border shadow-2xl">
+          <img
+            src={appScreenshot.url}
+            alt="Interface do sistema de moradores"
+            className="h-auto w-full"
+          />
+        </div>
+
+        <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <a
+            href="https://www.instagram.com/val.ceasa?igsh=dmhjMXV6dGprZWgx"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+          >
+            <InstagramIcon className="h-5 w-5" />
+            Instagram
+          </a>
+          <a
+            href="https://www.facebook.com/share/1coa54L3eJ/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border border-input bg-background px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+          >
+            <FacebookIcon className="h-5 w-5" />
+            Facebook
+          </a>
+        </div>
+      </div>
+    </main>
+  );
+}
+
+function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
     >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+    </svg>
+  );
+}
+
+function FacebookIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+    </svg>
   );
 }
