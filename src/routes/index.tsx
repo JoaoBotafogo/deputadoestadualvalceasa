@@ -28,9 +28,26 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-background px-6 py-12 sm:py-16">
-      <div className="w-full max-w-3xl text-center">
-        <div className="mb-10 overflow-hidden rounded-2xl border border-border shadow-2xl">
+    <main className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-[#0b1f4d] via-[#0d2763] to-[#0b1f4d] px-4 py-8 sm:px-6 sm:py-12">
+      {/* Subtle radial glow */}
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#15397a]/30 via-transparent to-transparent" />
+
+      <div className="relative z-10 w-full max-w-5xl">
+        {/* Header text */}
+        <div className="mb-6 text-center sm:mb-8">
+          <p className="text-sm font-semibold tracking-[0.2em] text-[#f7ff00] uppercase sm:text-base">
+            Deputado Estadual
+          </p>
+          <h1 className="mt-1 text-3xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">
+            Val Ceasa
+          </h1>
+          <p className="mt-2 text-lg font-medium text-white/90 sm:text-2xl">
+            O Amigo do Povo
+          </p>
+        </div>
+
+        {/* Campaign image - larger and more prominent */}
+        <div className="mx-auto mb-8 w-full max-w-4xl overflow-hidden rounded-2xl border-4 border-[#f7ff00] shadow-2xl shadow-black/40 sm:mb-10 sm:rounded-3xl sm:border-[6px]">
           <img
             src={valCeasa.url}
             alt="Val Ceasa - Deputado Estadual 25888"
@@ -38,26 +55,41 @@ function Index() {
           />
         </div>
 
-        <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+        {/* Number badge */}
+        <div className="mb-8 flex justify-center sm:mb-10">
+          <div className="rounded-full bg-[#f7ff00] px-6 py-2 shadow-lg shadow-[#f7ff00]/20 sm:px-8 sm:py-3">
+            <span className="text-2xl font-black tracking-wider text-[#0b1f4d] sm:text-4xl">
+              2 5 8 8 8
+            </span>
+          </div>
+        </div>
+
+        {/* Social buttons */}
+        <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
           <a
             href="https://www.instagram.com/val.ceasa?igsh=dmhjMXV6dGprZWgx"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#f7ff00] px-7 py-3.5 text-sm font-bold text-[#0b1f4d] shadow-lg shadow-[#f7ff00]/20 transition-all hover:scale-105 hover:bg-[#e6ed00] hover:shadow-xl sm:w-auto sm:px-8 sm:py-4 sm:text-base"
           >
-            <InstagramIcon className="h-5 w-5" />
+            <InstagramIcon className="h-5 w-5 sm:h-6 sm:w-6" />
             Instagram
           </a>
           <a
             href="https://www.facebook.com/share/1coa54L3eJ/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-input bg-background px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+            className="inline-flex w-full items-center justify-center gap-3 rounded-full border-2 border-white/80 bg-white/10 px-7 py-3.5 text-sm font-bold text-white backdrop-blur-sm transition-all hover:scale-105 hover:bg-white/20 sm:w-auto sm:px-8 sm:py-4 sm:text-base"
           >
-            <FacebookIcon className="h-5 w-5" />
+            <FacebookIcon className="h-5 w-5 sm:h-6 sm:w-6" />
             Facebook
           </a>
         </div>
+
+        {/* Footer handle */}
+        <p className="mt-8 text-center text-xs font-medium text-white/60 sm:mt-10 sm:text-sm">
+          @val.ceasa | Deputado Val Ceasa
+        </p>
       </div>
     </main>
   );
@@ -88,3 +120,4 @@ function FacebookIcon(props: React.SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
