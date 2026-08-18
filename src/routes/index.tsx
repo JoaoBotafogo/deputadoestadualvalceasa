@@ -70,7 +70,7 @@ function Index() {
             href="https://www.instagram.com/val.ceasa?igsh=dmhjMXV6dGprZWgx"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#f7ff00] px-7 py-3.5 text-sm font-bold text-[#0b1f4d] shadow-lg shadow-[#f7ff00]/20 transition-all hover:scale-105 hover:bg-[#e6ed00] hover:shadow-xl sm:w-auto sm:px-8 sm:py-4 sm:text-base"
+            className="inline-flex w-full items-center justify-center gap-3 rounded-full bg-gradient-to-r from-[#f09433] via-[#e6683c] via-[#dc2743] to-[#bc1888] px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-pink-500/20 transition-all hover:scale-105 hover:brightness-110 sm:w-auto sm:px-8 sm:py-4 sm:text-base"
           >
             <InstagramIcon className="h-5 w-5 sm:h-6 sm:w-6" />
             Instagram
