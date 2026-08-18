@@ -1,14 +1,26 @@
-# Welcome to your Lovable project
+# Val Ceasa Landing
+
+Criar uma Landing page bem simples, muito simples mesmo e basica com essa imagem bem grande no inicio
+
+e deixando bem evidente tb e indo para as redes sociais
+
+https://www.instagram.com/val.ceasa?igsh=dmhjMXV6dGprZWgx
+
+https://www.facebook.com/share/1coa54L3eJ/
+
+apenas isso
 
 This project was built with [Lovable](https://lovable.dev).
 
+**Live app**: https://deputadoestadualvalceasa.lovable.app
+
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/1567984e-975c-42f1-a481-e902157f56f3).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +32,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
