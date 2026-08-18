@@ -1,23 +1,23 @@
 import { createFileRoute } from "@tanstack/react-router";
-import appScreenshot from "@/assets/app-screenshot.png.asset.json";
+import valCeasa from "@/assets/val-ceasa.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Val Ceasa | Gestão de Moradores" },
+      { title: "Val Ceasa 25888 | Deputado Estadual" },
       {
         name: "description",
         content:
-          "Sistema simples para gestão de moradores, unidades e comunicação do condomínio.",
+          "Val Ceasa, o Amigo do Povo. Deputado Estadual 25888. Siga nas redes sociais.",
       },
       {
         property: "og:title",
-        content: "Val Ceasa | Gestão de Moradores",
+        content: "Val Ceasa 25888 | Deputado Estadual",
       },
       {
         property: "og:description",
         content:
-          "Sistema simples para gestão de moradores, unidades e comunicação do condomínio.",
+          "Val Ceasa, o Amigo do Povo. Deputado Estadual 25888. Siga nas redes sociais.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -30,17 +30,10 @@ function Index() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-background px-6 py-12 sm:py-16">
       <div className="w-full max-w-3xl text-center">
-        <h1 className="mb-3 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-          Val Ceasa
-        </h1>
-        <p className="mb-10 text-lg text-muted-foreground">
-          Sistema simples para gestão de moradores e condomínios.
-        </p>
-
-        <div className="mb-12 overflow-hidden rounded-2xl border border-border shadow-2xl">
+        <div className="mb-10 overflow-hidden rounded-2xl border border-border shadow-2xl">
           <img
-            src={appScreenshot.url}
-            alt="Interface do sistema de moradores"
+            src={valCeasa.url}
+            alt="Val Ceasa - Deputado Estadual 25888"
             className="h-auto w-full"
           />
         </div>
