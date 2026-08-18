@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import valCeasa from "@/assets/val-ceasa.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -36,7 +35,7 @@ function Index() {
         {/* Campaign image */}
         <div className="mx-auto mb-8 w-full max-w-4xl overflow-hidden rounded-2xl border-4 border-[#f7ff00] shadow-2xl shadow-black/40 sm:mb-10 sm:rounded-3xl sm:border-[6px]">
           <img
-            src={valCeasa.url}
+            src="/val-ceasa.jpg"
             alt="Val Ceasa - Deputado Estadual 25888"
             className="h-auto w-full"
           />
